@@ -27,7 +27,7 @@ Press the "esc" key to exit.
 Search for "NN_NEW" in `__main__.py` and set it to `True`, and after you trained the network, press the button "save" to save it.
 
 ### 3. How to reset the dataset?
-Suppose you wish to reset the dataset of zero "0". In that case, replace all the contents inside the file "0.json" with an empty list `[]`.
+Suppose you wish to reset the dataset of zero "0". In that case, replace all the contents inside the file `dataset/0.json` with an empty list `[]`.
 
 ## Troubleshoot
 1. If the "numpy" or "numba" module is missing, run the following command:
