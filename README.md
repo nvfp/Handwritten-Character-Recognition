@@ -1,5 +1,6 @@
 ## Handwritten-Character-Recognition
 ![Demo gif](_imgs/demo.gif)
+
 Let's have a look at how a neural network looks. This is a from-scratch neural network implemented in Python using numpy and numba, designed to recognize handwritten characters. The network diagram displays a few out of thousands of inputs. Blue color is used to represent positive neurons and weights, while red is used for the negative ones.
 
 ### The main visual interface
