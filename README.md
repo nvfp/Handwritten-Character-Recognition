@@ -37,5 +37,9 @@ Suppose you wish to reset the dataset of zero "0". In that case, replace all the
     pip install -r requirements.txt
     ```
 
+## Changelog
+- v1.0.1 (May 10, 2023):
+    - Resolved bug: Renamed `carbon` to `carbon_plug` to prevent conflicts with the original `carbon` module (if installed).
+
 ## License
 This project is licensed under the MIT license.

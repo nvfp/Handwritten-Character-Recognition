@@ -1,7 +1,7 @@
 import tkinter as tk
 
-from carbon.gui.label import Label
-from carbon.text import byte
+from carbon_plug.gui.label import Label
+from carbon_plug.text import byte
 
 from main.misc import THEME_BACKGROUND, THEME_FONT_COLOR
 

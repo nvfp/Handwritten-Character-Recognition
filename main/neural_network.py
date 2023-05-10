@@ -3,8 +3,8 @@ import random
 import time
 from typing import Optional
 
-from carbon.math import tanh, sigmoid
-from carbon.utils import printer
+from carbon_plug.math import tanh, sigmoid
+from carbon_plug.utils import printer
 
 
 class NeuralNetwork:

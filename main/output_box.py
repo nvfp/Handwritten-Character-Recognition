@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from carbon.gui.label import Label
+from carbon_plug.gui.label import Label
 
 from main.misc import THEME_BORDER_COLOR
 

@@ -2,7 +2,7 @@ import json as _json
 import os as _os
 import typing as _typing
 
-from carbon.utils import (
+from carbon_plug.utils import (
     printer as _printer
 )
 
