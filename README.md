@@ -21,8 +21,8 @@ Let's take a closer look at the appearance of a neural network. This software pr
 
 ## Installation
 
-1. Download this repository and save it to your machine (e.g. `~/code/Handwritten-Character-Recognition`)
-2. Navigate to the folder where `Handwritten-Character-Recognition` is located, then run the following command:
+1. Download this repo and save it to your machine (e.g. `~/code/Handwritten-Character-Recognition`)
+2. Go to the folder where `Handwritten-Character-Recognition` is located, run:
 
     ```sh
     python Handwritten-Character-Recognition
@@ -55,7 +55,7 @@ Let's take a closer look at the appearance of a neural network. This software pr
 ## Changelog
 
 - v1.0.1 (May 10, 2023):
-    - Resolved bug: Renamed `carbon` to `carbon_plug` to prevent conflicts with the original `carbon` module (if installed).
+    - BUG FIXED: Renamed `carbon` to `carbon_plug` to prevent conflicts with the original `carbon` module (if installed).
 
 
 ## License
