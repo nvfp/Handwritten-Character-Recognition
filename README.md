@@ -1,45 +1,63 @@
-## Handwritten-Character-Recognition
+# Handwritten-Character-Recognition
+
 ![Demo gif](_imgs/demo.gif)
 
-Let's have a look at how a neural network looks. This is a from-scratch neural network implemented in Python using numpy and numba, designed to recognize handwritten characters. The network diagram displays a few out of thousands of inputs. Blue color is used to represent positive neurons and weights, while red is used for the negative ones.
+Let's take a closer look at the appearance of a neural network. This software provides visualization of neural network diagrams, allowing us to observe the training process and create, save, and customize our own datasets. It offers full flexibility and customization options, with minimal dependencies, aiming to be as convenient as possible.
 
-### The main visual interface
-![The main visual interface of the application](_imgs/1.jpg)
+- **The main visual interface**
 
-### Dataset viewer
-![Dataset viewer](_imgs/2.jpg)
+    ![The main visual interface of the application](_imgs/1.jpg)
 
-### Training the network
-![Training the network](_imgs/3.jpg)
+- **Dataset viewer**
 
-### [Demo video](https://youtu.be/GX0xBjiwgtg).
+    ![Dataset viewer](_imgs/2.jpg)
 
-## Usage
-1. Download this repository and save it to your machine (e.g. ~/code/Handwritten-Character-Recognition)
+- **Training the network**
+
+    ![Training the network](_imgs/3.jpg)
+
+> **[Demo video](https://youtu.be/GX0xBjiwgtg)**.
+
+
+## Installation
+
+1. Download this repository and save it to your machine (e.g. `~/code/Handwritten-Character-Recognition`)
 2. Navigate to the folder where `Handwritten-Character-Recognition` is located, then run the following command:
+
     ```sh
     python Handwritten-Character-Recognition
     ```
 
+
 ## FAQ
-### 1. How to exit the application?
-Press the "esc" key to exit.
 
-### 2. How to reset the network?
-Search for "NN_NEW" in `__main__.py` and set it to `True`, and after you trained the network, press the button "save" to save it.
+- **To exit the application**: press the "esc" key
 
-### 3. How to reset the dataset?
-Suppose you wish to reset the dataset of zero "0". In that case, replace all the contents inside the file `dataset/0.json` with an empty list `[]`.
+- **To reset the network**:
+
+    Search for `NN_NEW` in `__main__.py` and set it to `True`. After you trained the network, press the button "save" to save it.
+
+- **To reset the dataset**:
+
+    Example: to reset the dataset of zero "0", replace the contents of the file `dataset/0.json` with an empty list `[]`.
+
 
 ## Troubleshoot
-1. If the "numpy" or "numba" module is missing, run the following command:
+
+- If the `numpy` or `numba` module is missing, run the following command:
+
     ```sh
     pip install -r requirements.txt
     ```
+- To report bugs/issues or ask questions, you can reach me [here](https://nvfp.github.io/contact) or open an issue/pull request.
+
 
 ## Changelog
+
 - v1.0.1 (May 10, 2023):
     - Resolved bug: Renamed `carbon` to `carbon_plug` to prevent conflicts with the original `carbon` module (if installed).
 
+
 ## License
+
 This project is licensed under the MIT license.
