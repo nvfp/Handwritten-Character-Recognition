@@ -1,8 +1,19 @@
 # Handwritten-Character-Recognition
 
+This software was made to show the beauty of neural networks, visualizing the fully connected neural network diagram, and how it's being trained. Built from the ground up without any machine learning libraries.
+
 ![Demo gif](_imgs/demo.gif)
 
-Let's take a closer look at the appearance of a fully connected neural network. This software visualizes dense neural network diagram, allowing us to watch the training process in real-time, and create-save-delete our own datasets. It offers full flexibility and customization options, with minimal dependencies, aiming to be as convenient as possible.
+- What we can do
+    1. Create a new network
+    2. Create datasets
+    3. Train the model
+    4. Save the network and reopen it
+    5. View and delete our own datasets
+
+- Customization
+    - Change the number of hidden layers
+    - Change the drawing pad resolution
 
 - **The main visual interface**
 
