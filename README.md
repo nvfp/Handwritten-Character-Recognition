@@ -2,7 +2,7 @@
 
 ![Demo gif](_imgs/demo.gif)
 
-Let's take a closer look at the appearance of a neural network. This software provides visualization of neural network diagrams, allowing us to observe the training process and create, save, and customize our own datasets. It offers full flexibility and customization options, with minimal dependencies, aiming to be as convenient as possible.
+Let's take a closer look at the appearance of a fully connected neural network. This software visualizes dense neural network diagram, allowing us to watch the training process in real-time, and create-save-delete our own datasets. It offers full flexibility and customization options, with minimal dependencies, aiming to be as convenient as possible.
 
 - **The main visual interface**
 
