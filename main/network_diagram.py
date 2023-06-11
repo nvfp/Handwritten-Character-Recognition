@@ -4,9 +4,8 @@ import numpy as np
 import time
 import tkinter as tk
 
-from carbon.color import getgray, rgb_to_hex
+from carbon.color import getgray, rgb_to_hex, interpolate_with_black
 
-from carbon_plug.color import interpolate_with_black
 from carbon_plug.gui.label import Label
 from carbon_plug.utils import printer
 
