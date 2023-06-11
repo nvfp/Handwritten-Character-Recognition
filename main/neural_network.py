@@ -3,7 +3,8 @@ import random
 import time
 from typing import Optional
 
-from carbon_plug.math import tanh, sigmoid
+from carbon.maths import tanh, sigmoid
+
 from carbon_plug.utils import printer
 
 
