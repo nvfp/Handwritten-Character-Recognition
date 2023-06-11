@@ -32,12 +32,12 @@ This software was made to show the beauty of neural networks, visualizing the fu
 
 ## Installation
 
-1. Download this repo and save it to your machine (e.g. `~/code/Handwritten-Character-Recognition`)
-2. Go to the folder where `Handwritten-Character-Recognition` is located, run:
-
-    ```sh
-    python Handwritten-Character-Recognition
-    ```
+1. Download the latest [version](https://github.com/nvfp/Handwritten-Character-Recognition/releases)
+2. Save it under your favorite folder (e.g. `/foo/Handwritten-Character-Recognition`)
+3. Navigate to `/foo/Handwritten-Character-Recognition`
+4. Install dependencies by running `pip install -r requirements.txt`
+5. Run `python __main__.py`
+6. There you go!
 
 
 ## FAQ
@@ -53,18 +53,21 @@ This software was made to show the beauty of neural networks, visualizing the fu
     Example: to reset the dataset of zero "0", replace the contents of the file `dataset/0.json` with an empty list `[]`.
 
 
+## Limitations
+
+- Always in fullscreen mode
+- The UI layout is customized for the 1366x768 display size
+
+
 ## Troubleshoot
 
-- If the `numpy` or `numba` module is missing, run the following command:
-
-    ```sh
-    pip install -r requirements.txt
-    ```
 - To report bugs/issues or ask questions, you can reach me [here](https://nvfp.github.io/contact) or open an issue/pull request.
 
 
 ## Changelog
 
+- 2.0.0 (June 11, 2023):
+    - removed `carbon_plug`, using [carbon](https://github.com/nvfp/carbon) instead
 - v1.0.1 (May 10, 2023):
     - BUG FIXED: Renamed `carbon` to `carbon_plug` to prevent conflicts with the original `carbon` module (if installed).
 
