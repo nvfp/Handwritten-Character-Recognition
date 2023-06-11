@@ -3,11 +3,11 @@ import os
 import random
 import tkinter as tk
 
+from carbon.path import SafeJSON
 from carbon.utils import printer
 
 from carbon_plug.gui.button import Button
 from carbon_plug.gui.label import Label
-from carbon_plug.path import Json
 
 from main.misc import SOFTWARE_DIR_PTH, THEME_BORDER_COLOR, THEME_FONT_COLOR
 
@@ -55,7 +55,7 @@ class Dataset:
             pth = os.path.join(DATASET_DIR_PTH, f'{i}.json')
 
             k = 0
-            for img_core in Json.read(pth):
+            for img_core in SafeJSON.read(pth):
                 self.dataset.append((img_core, i))
                 k += 1
 
@@ -225,7 +225,7 @@ class Dataset:
             return
 
         pth = os.path.join(DATASET_DIR_PTH, f'{idx}.json')
-        data = Json.read(pth)
+        data = SafeJSON.read(pth)
 
         self.dataset.remove((img_core, idx))
         self.n -= 1
@@ -233,7 +233,7 @@ class Dataset:
         self.size -= len(str(img_core))
 
         data.remove(img_core)
-        Json.rewrite(pth, data)
+        SafeJSON.rewrite(pth, data)
         printer('Image deleted.')
 
         self.page.itemconfigure('dataset_nchar', text=f'\n'.join([f'#{LABELS[i]}: {j:,}' for i, j in self.n_char.items()]))
@@ -300,7 +300,7 @@ class Dataset:
         ]
 
         pth = os.path.join(DATASET_DIR_PTH, f'{idx}.json')
-        data = Json.read(pth)
+        data = SafeJSON.read(pth)
 
         if img_core in data:
             printer(f'This img_core with output-index {idx} is already exists.')
@@ -312,5 +312,5 @@ class Dataset:
         self.size += len(str(img_core))
 
         data.append(img_core)
-        Json.rewrite(pth, data)
+        SafeJSON.rewrite(pth, data)
         printer(f'New img_core with output-index {idx} is added.')

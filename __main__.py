@@ -11,12 +11,12 @@ import os
 import time
 import tkinter as tk
 
+from carbon.path import SafeJSON
 from carbon.time import get_dur
 from carbon.utils import printer
 
 from carbon_plug.gui.button import Button
 from carbon_plug.gui.label import Label
-from carbon_plug.path import Json
 
 from main.draw_pad import DrawPad, width as draw_pad_width
 from main.dataset import Dataset
@@ -73,13 +73,13 @@ if NN_NEW:
 else:
 
     printer('Loading the saved network.')
-    weights = Json.read(os.path.join(SAVED_NETWORK_DIR_PTH, 'weights.json'))
+    weights = SafeJSON.read(os.path.join(SAVED_NETWORK_DIR_PTH, 'weights.json'))
     weights = [np.array(w) for w in weights]
 
-    biases = Json.read(os.path.join(SAVED_NETWORK_DIR_PTH, 'biases.json'))
+    biases = SafeJSON.read(os.path.join(SAVED_NETWORK_DIR_PTH, 'biases.json'))
     biases = [np.array(b) for b in biases]
 
-    metadata = Json.read(os.path.join(SAVED_NETWORK_DIR_PTH, 'metadata.json'))
+    metadata = SafeJSON.read(os.path.join(SAVED_NETWORK_DIR_PTH, 'metadata.json'))
     printer(f'Using network with {metadata["n_learn"]} total learns.')
 
 nn = NeuralNetwork(sizes=NN_SIZES, weights=weights, biases=biases, metadata=metadata)

@@ -3,12 +3,12 @@ import os
 import random
 import tkinter as tk
 
+from carbon.path import SafeJSON
 from carbon.text import byteFmt
 from carbon.utils import printer
 
 from carbon_plug.gui.button import Button
 from carbon_plug.gui.label import Label
-from carbon_plug.path import Json
 
 from main.misc import SAVED_NETWORK_DIR_PTH
 
@@ -179,9 +179,9 @@ def register_buttons(
     def fn():
         weights = [w.tolist() for w in nn.weights]
         biases = [b.tolist() for b in nn.biases]
-        Json.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'weights.json'), weights)
-        Json.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'biases.json'), biases)
-        Json.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'metadata.json'), nn.metadata)
+        SafeJSON.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'weights.json'), weights)
+        SafeJSON.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'biases.json'), biases)
+        SafeJSON.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'metadata.json'), nn.metadata)
     Button(id='save', x=x+110, y=y, label='save', fn=fn, len=50, tags='clarity')
 
 
