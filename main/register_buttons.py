@@ -3,12 +3,12 @@ import os
 import random
 import tkinter as tk
 
+from carbon.text import byteFmt
 from carbon.utils import printer
 
 from carbon_plug.gui.button import Button
 from carbon_plug.gui.label import Label
 from carbon_plug.path import Json
-from carbon_plug.text import byte
 
 from main.misc import SAVED_NETWORK_DIR_PTH
 
@@ -76,7 +76,7 @@ def register_buttons(
                 f'#training data: {round(NN_DATASET_RATIO*dataset.n):,}\n'
                 f'#validation data: {round((1 - NN_DATASET_RATIO)*dataset.n):,}\n'
                 f'total dataset: {dataset.n:,}\n'
-                f'dataset size: {byte(dataset.size)}'
+                f'dataset size: {byteFmt(dataset.size)}'
             )
             Label.set_text_by_id('info1', text)
             draw_pad.clear()

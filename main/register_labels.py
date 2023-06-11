@@ -1,7 +1,8 @@
 import tkinter as tk
 
+from carbon.text import byteFmt
+
 from carbon_plug.gui.label import Label
-from carbon_plug.text import byte
 
 from main.misc import THEME_BACKGROUND, THEME_FONT_COLOR
 
@@ -50,7 +51,7 @@ def register_labels(
             f'#training data: {round(NN_DATASET_RATIO*dataset.n):,}\n'
             f'#validation data: {round((1 - NN_DATASET_RATIO)*dataset.n):,}\n'
             f'total dataset: {dataset.n:,}\n'
-            f'dataset size: {byte(dataset.size)}'
+            f'dataset size: {byteFmt(dataset.size)}'
         ),
         font='Consolas 12', justify='left', anchor='nw',
         fg=THEME_FONT_COLOR, bg=THEME_BACKGROUND, tags='clarity',
