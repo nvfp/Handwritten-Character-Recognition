@@ -3,11 +3,12 @@ import os
 import random
 import tkinter as tk
 
+from carbon.utils import printer
+
 from carbon_plug.gui.button import Button
 from carbon_plug.gui.label import Label
 from carbon_plug.path import Json
 from carbon_plug.text import byte
-from carbon_plug.utils import printer
 
 from main.misc import SAVED_NETWORK_DIR_PTH
 

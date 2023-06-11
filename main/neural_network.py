@@ -4,8 +4,7 @@ import time
 from typing import Optional
 
 from carbon.maths import tanh, sigmoid
-
-from carbon_plug.utils import printer
+from carbon.utils import printer
 
 
 class NeuralNetwork:
