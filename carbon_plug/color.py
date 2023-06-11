@@ -16,15 +16,6 @@ def hexa_to_hex(fg: str, alpha: float, bg: str, /) -> str:
     return f'#{r:02x}{g:02x}{b:02x}'
 
 
-def get_gray(alpha: float, max_lum: int = 255, /) -> str:
-    """
-    alpha interval: [0, 1].
-    max_lum interval: [0, 255].
-    """
-    a = f'{round(max_lum*alpha):02x}'
-    return f'#{a}{a}{a}'
-
-
 def interpolate_with_black(color: str, alpha: float, /) -> str:
 
     color = [int(color[i:i+2], 16) for i in (1, 3, 5)]

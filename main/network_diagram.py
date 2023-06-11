@@ -4,7 +4,9 @@ import numpy as np
 import time
 import tkinter as tk
 
-from carbon_plug.color import get_gray, interpolate_with_black, rgb_to_hex
+from carbon.color import getgray
+
+from carbon_plug.color import interpolate_with_black, rgb_to_hex
 from carbon_plug.gui.label import Label
 from carbon_plug.utils import printer
 
@@ -256,7 +258,7 @@ class NetworkDiagram:
                     NetworkDiagram.shown_neurons[i][neuron_idx] = new
 
                     if i in {0, self.nn.n_layer - 1}:
-                        self.page.itemconfigure(f'neuron_{i}_{neuron_idx}', fill=get_gray(new, NEURON_MAX_LUM))
+                        self.page.itemconfigure(f'neuron_{i}_{neuron_idx}', fill=getgray(new, NEURON_MAX_LUM))
                     else:
                         if new >= 0:
                             color = interpolate_with_black(color_positive_in_hex, new)
