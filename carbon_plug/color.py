@@ -25,7 +25,3 @@ def interpolate_with_black(color: str, alpha: float, /) -> str:
     b = round(color[2]*alpha)
 
     return f'#{r:02x}{g:02x}{b:02x}'
-
-
-def rgb_to_hex(r: int, g: int, b: int, /) -> str:
-    return f'#{r:02x}{g:02x}{b:02x}'
