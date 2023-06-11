@@ -11,12 +11,12 @@ import os
 import time
 import tkinter as tk
 
+from carbon.time import get_dur
 from carbon.utils import printer
 
 from carbon_plug.gui.button import Button
 from carbon_plug.gui.label import Label
 from carbon_plug.path import Json
-from carbon_plug.time import get_dur
 
 from main.draw_pad import DrawPad, width as draw_pad_width
 from main.dataset import Dataset
