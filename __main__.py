@@ -11,12 +11,11 @@ import os
 import time
 import tkinter as tk
 
-from carbon.path import SafeJSON
-from carbon.time import get_dur
-from carbon.utils import printer
-
-from carbon_plug.gui.button import Button
-from carbon_plug.gui.label import Label
+from mykit.app.button import Button
+from mykit.app.label import Label
+from mykit.kit.path import SafeJSON
+from mykit.kit.time import get_dur
+from mykit.kit.utils import printer
 
 from main.draw_pad import DrawPad, width as draw_pad_width
 from main.dataset import Dataset
@@ -59,7 +58,7 @@ page = tk.Canvas(
 )
 page.place(x=0, y=0)
 
-Button.page = page
+Button.set_page(page)
 
 
 draw_pad = DrawPad(page, 15, (page.winfo_reqheight() - 64*4)//2)
@@ -119,7 +118,7 @@ def show_result():
     output_box.tell(nn.decision)
 
 def left_mouse_press(e):
-    Button.press_listener()    
+    Button.press_listener()
     if draw_pad.paint() and Runtime.realtime:
         show_result()
 root.bind('<ButtonPress-1>', left_mouse_press)

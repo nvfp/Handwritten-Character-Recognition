@@ -3,11 +3,10 @@ import os
 import random
 import tkinter as tk
 
-from carbon.path import SafeJSON
-from carbon.utils import printer
-
-from carbon_plug.gui.button import Button
-from carbon_plug.gui.label import Label
+from mykit.app.button import Button
+from mykit.app.label import Label
+from mykit.kit.path import SafeJSON
+from mykit.kit.utils import printer
 
 from main.misc import SOFTWARE_DIR_PTH, THEME_BORDER_COLOR, THEME_FONT_COLOR
 
@@ -75,7 +74,7 @@ class Dataset:
             ('delete', self.delete),
         ]
         for i, (label, fn) in enumerate(pack):
-            Button(id=f'dataset_{label}', x=40+60*i, y=15, label=label, fn=fn, len=50, locked=True, visible=False, tags='dataset')
+            Button(id=f'dataset_{label}', x=40+60*i, y=15, label=label, fn=fn, width=50, locked=True, visible=False, tags='dataset')
         Button.set_lock_by_id('dataset_close', False)
         Button.set_lock_by_id('dataset_delete', False)
 

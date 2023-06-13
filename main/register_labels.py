@@ -1,8 +1,7 @@
 import tkinter as tk
 
-from carbon.text import byteFmt
-
-from carbon_plug.gui.label import Label
+from mykit.app.label import Label
+from mykit.kit.text import byteFmt
 
 from main.misc import THEME_BACKGROUND, THEME_FONT_COLOR
 

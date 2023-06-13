@@ -1,7 +1,7 @@
 import numpy as np
 import tkinter as tk
 
-from carbon_plug.gui.label import Label
+from mykit.app.label import Label
 
 from main.misc import THEME_BORDER_COLOR
 

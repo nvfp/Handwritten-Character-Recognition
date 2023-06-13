@@ -4,10 +4,9 @@ import numpy as np
 import time
 import tkinter as tk
 
-from carbon.color import getgray, rgb_to_hex, interpolate_with_black
-from carbon.utils import printer
-
-from carbon_plug.gui.label import Label
+from mykit.app.label import Label
+from mykit.kit.color import getgray, rgb_to_hex, interpolate_with_black
+from mykit.kit.utils import printer
 
 from main.neural_network import NeuralNetwork
 from main.misc import THEME_BORDER_COLOR, THEME_FONT_COLOR

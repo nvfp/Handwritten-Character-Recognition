@@ -1,7 +1,7 @@
 import tkinter as tk
 
-from carbon_plug.gui.button import Button
-from carbon_plug.gui.label import Label
+from mykit.app.button import Button
+from mykit.app.label import Label
 
 from main.misc import THEME_BORDER_COLOR, THEME_FONT_COLOR
 
@@ -28,7 +28,7 @@ class Graph:
         self.tl_x = tl_x
         self.tl_y = tl_y
 
-        Button(id='graph', x=tl_x+25, y=tl_y+height-17, label='show', fn=self.show, len=45, tags='clarity')
+        Button(id='graph', x=tl_x+25, y=tl_y+height-17, label='show', fn=self.show, width=45, tags='clarity')
 
     def plot(self, title, t_data, v_data, xmax, ymax, width, height, tl_x, tl_y):
 
