@@ -66,8 +66,8 @@ This software was made to show the beauty of neural networks, visualizing the fu
 
 ## Changelog
 
-- 2.0.0 (June 11, 2023):
-    - removed `carbon_plug`, using [carbon](https://github.com/nvfp/carbon) instead
+- 1.1.0 (June 11, 2023):
+    - removed `carbon_plug`, using [mykit](https://github.com/nvfp/mykit) instead
 - v1.0.1 (May 10, 2023):
     - BUG FIXED: Renamed `carbon` to `carbon_plug` to prevent conflicts with the original `carbon` module (if installed).
 
