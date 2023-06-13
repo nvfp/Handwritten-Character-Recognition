@@ -46,9 +46,9 @@ def register_buttons(
     def fn():
         draw_pad.clear()
         output_box.tell(None)
-    Button(id='clear', x=x, y=y, label='clear', fn=fn, width=50)
+    Button(id='clear', x=x, y=y, label='clear', fn=fn, width=50, anchor='center')
 
-    Button(id='feedforward', x=x+70, y=y, label='feedforward', fn=show_result, width=80)
+    Button(id='feedforward', x=x+70, y=y, label='feedforward', fn=show_result, width=80, anchor='center')
 
     def fn():
         Runtime.realtime = not Runtime.realtime
@@ -58,7 +58,7 @@ def register_buttons(
         else:
             Button.set_lock_by_id('feedforward', False)
             Button.set_label_by_id('realtime', 'realtime (OFF)')
-    Button(id='realtime', x=x+170, y=y, label='realtime (OFF)', fn=fn, width=100)
+    Button(id='realtime', x=x+170, y=y, label='realtime (OFF)', fn=fn, width=100, anchor='center')
 
 
     x = 25
@@ -81,13 +81,13 @@ def register_buttons(
             draw_pad.clear()
         return fn
     for i, j in enumerate('1234567890'):
-        Button(id=f'train_data_{j}', x=x+pad_x*i, y=y+pad_y*0, label=j, fn=fn_wrapper(MAP[j]), width=len, tags='clarity')
+        Button(id=f'train_data_{j}', x=x+pad_x*i, y=y+pad_y*0, label=j, fn=fn_wrapper(MAP[j]), width=len, tags='clarity', anchor='center')
     for i, j in enumerate('qwertyuiop'):
-        Button(id=f'train_data_{j}', x=x+pad_x*i+14, y=y+pad_y*1, label=j, fn=fn_wrapper(MAP[j]), width=len, tags='clarity')
+        Button(id=f'train_data_{j}', x=x+pad_x*i+14, y=y+pad_y*1, label=j, fn=fn_wrapper(MAP[j]), width=len, tags='clarity', anchor='center')
     for i, j in enumerate('asdfghjkl'):
-        Button(id=f'train_data_{j}', x=x+pad_x*i+21, y=y+pad_y*2, label=j, fn=fn_wrapper(MAP[j]), width=len, tags='clarity')
+        Button(id=f'train_data_{j}', x=x+pad_x*i+21, y=y+pad_y*2, label=j, fn=fn_wrapper(MAP[j]), width=len, tags='clarity', anchor='center')
     for i, j in enumerate('zxcvbnm'):
-        Button(id=f'train_data_{j}', x=x+pad_x*i+30, y=y+pad_y*3, label=j, fn=fn_wrapper(MAP[j]), width=len, tags='clarity')
+        Button(id=f'train_data_{j}', x=x+pad_x*i+30, y=y+pad_y*3, label=j, fn=fn_wrapper(MAP[j]), width=len, tags='clarity', anchor='center')
 
 
     x = 40
@@ -96,7 +96,7 @@ def register_buttons(
     def fn():
         graph.hide()  # hide if shown
         dataset.show()
-    Button(id='open', x=x, y=y, label='open', fn=fn, width=45, tags='clarity')
+    Button(id='open', x=x, y=y, label='open', fn=fn, width=45, tags='clarity', anchor='center')
 
     ## <train>
     def _fn(epoch):
@@ -172,7 +172,7 @@ def register_buttons(
         Label.set_visibility_all(True)
         graph.show()
 
-    Button(id='train', x=x+55, y=y, label='train', fn=fn, width=40, tags='clarity')
+    Button(id='train', x=x+55, y=y, label='train', fn=fn, width=40, tags='clarity', anchor='center')
     ## </train>
 
     def fn():
@@ -181,7 +181,7 @@ def register_buttons(
         SafeJSON.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'weights.json'), weights)
         SafeJSON.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'biases.json'), biases)
         SafeJSON.rewrite(os.path.join(SAVED_NETWORK_DIR_PTH, 'metadata.json'), nn.metadata)
-    Button(id='save', x=x+110, y=y, label='save', fn=fn, width=50, tags='clarity')
+    Button(id='save', x=x+110, y=y, label='save', fn=fn, width=50, tags='clarity', anchor='center')
 
 
     def fn():
@@ -194,4 +194,4 @@ def register_buttons(
             Label.set_visibility_by_tag('clarity', True)
             Button.set_visibility_by_tag('clarity', True)
             Button.set_label_by_id('clarity', 'hide')
-    Button(id='clarity', x=35, y=page.winfo_reqheight()*0.95, label='hide', fn=fn, width=45)
+    Button(id='clarity', x=35, y=page.winfo_reqheight()*0.95, label='hide', fn=fn, width=45, anchor='center')

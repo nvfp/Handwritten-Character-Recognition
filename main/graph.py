@@ -28,7 +28,7 @@ class Graph:
         self.tl_x = tl_x
         self.tl_y = tl_y
 
-        Button(id='graph', x=tl_x+25, y=tl_y+height-17, label='show', fn=self.show, width=45, tags='clarity')
+        Button(id='graph', x=tl_x+25, y=tl_y+height-17, label='show', fn=self.show, width=45, tags='clarity', anchor='center')
 
     def plot(self, title, t_data, v_data, xmax, ymax, width, height, tl_x, tl_y):
 

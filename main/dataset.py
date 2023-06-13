@@ -74,7 +74,7 @@ class Dataset:
             ('delete', self.delete),
         ]
         for i, (label, fn) in enumerate(pack):
-            Button(id=f'dataset_{label}', x=40+60*i, y=15, label=label, fn=fn, width=50, locked=True, visible=False, tags='dataset')
+            Button(id=f'dataset_{label}', x=40+60*i, y=15, label=label, fn=fn, width=50, locked=True, visible=False, tags='dataset', anchor='center')
         Button.set_lock_by_id('dataset_close', False)
         Button.set_lock_by_id('dataset_delete', False)
 
